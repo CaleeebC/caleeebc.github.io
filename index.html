@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Diffie Hellman</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="info">
+            <h1>The Diffie Hellman Key Exchange</h1>
+            <div class="infop">
+            <p>I did my 20% project on the Diffie Hellman key exchange. It is a cryptographic method in which two parties can build a private key over a public channel. In many forms of cryptography some type of private key is needed to decode the cipher. It is important that the private key is only known by those intended to receive the message. So how do you exchange a key without a secure channel? The answer is the Diffie Hellman key exchange. For example if we have people Bob and Alice and they want to exchange a key with Diffie Hellman. First they decide on a number G which is normally around 4 thousand bits or 4 thousand digits. G must be a safe prime number in order to prevent the secret numbers from being discovered with an algorithm. They also decide on a number N this number is used in the modulo operations that occur in the key exchange. Then Bob and Alice each decide their own secret numbers they don't tell eachother. Now Alice combines A, G, and N by finding G to the power of A mod N. This is important because it is very difficult to reverse the result and find A without brute forcing.  Bob does the same thing with B. Bob and Alice exchange these numbers I call the initial returns. They then repeat the math with the numbers they receive replacing G with the numbers they initial returns they've received.  The numbers produced become the key as the same number should be produced for both Alice and Bob. My program sadly isn't perfect so not all numbers work and the same keys are not always produced. I would recommend trying my problem with these numbers. G=5 N=23 A=4 B=3. In order to use the program, open this page in two tabs using A as a secret num for one page and B as a secret num on the other. This can also be done with another person where each of you use this page.</p>
+            </div>
+        </div>
+        <div class="diffieHellmanExample">
+            <div class="diffie1">
+                <form>
+                    <label>Secret Num:</label>
+                    <input type="text" id="secretNum">
+                    <label>G:</label>
+                    <input type="text" id="g">
+                    <label>N:</label>
+                    <input type="text" id="n">
+                    <div id="initialReturn"></div>
+                </form>
+                <div id="button">
+                    <button onclick="initialMod()">Calculate Initial Return</button><br><br>
+                </div>
+                <div id="finalReturn">
+                </div>
+                <script src="diffie.js"></script>
+            </div>
+        </div>
+    </body>
+</html>

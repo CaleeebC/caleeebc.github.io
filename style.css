@@ -1,0 +1,23 @@
+* {
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+}
+
+.info {
+    margin: auto;
+    width: 70%;
+}
+
+.diffieHellmanExample {
+    margin: auto;
+    width: 70%;
+    outline-color: cornflowerblue;
+    outline-style: solid;
+}
+
+.diffie1 {
+    margin: 10px;
+}
